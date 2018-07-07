@@ -1,0 +1,32 @@
+#myReps {
+    margin-top: 100px;
+}
+#rep {
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+   
+}
+
+#senOne {
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+}
+
+#senTwo {
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+}
+
+/*
+#bioInfo {
+    clear: left
+}
+*/
+    
+
+h2 {
+    color:red;
+}
