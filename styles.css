@@ -1,0 +1,27 @@
+/* @import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'font-awesome.min.css';
+@import 'popper.css';
+@import 'code.css';
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic'); */
+
+/*
+Spectral by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+
+/* import PopperJs from 'popper.js'; */
+
+@import 'libs/mixins'
+
+/* .landing{
+    @include stripes(to right, mix(#78C5D6, black, 40%) mix(#459BA8, black, 40%) mix(#79C267, black, 40%) mix(#C5D647, black, 40%) mix(#F5D63D, black, 40%) mix(#F28C33, black, 40%) mix(#E868A2, black, 40%) mix(#BF62A6, black, 40%));
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
+} */
