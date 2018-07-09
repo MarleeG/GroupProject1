@@ -80,21 +80,55 @@
     <div id="titlePage" style="height: 100vh">
         <div class="flex-center flex-column">
             <h1 class="animated fadeIn mb-4" id="projectTitle">
-                Project Name
+                Who represents you?
             </h1>
 
             <h5 class="animated fadeIn mb-3" id="projectInfo">A KICKASS WAY TO LEARN ABOUT POLITICS</h5>
 
             
 
-            <a href="repMDB.html" class="btn btn-mdb-color" role="button">find my rep</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPush">Start</button>
+            
          
         
-</section>
+<!--Modal: modalPush-->
+<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content text-center">
+                
+               
 
-    <!-- =========================================================== End Title Page =========================================================== -->
+                <!--Header-->
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="heading">Select a state</p>
+                </div>
+    
+                <!--Body-->
+                <div class="modal-body">
+    
+                    <i class="fa fa-search fa-4x animated rotateIn"></i>
+    
+                    <p>Find your representatives and senators in the U.S. Congress</p>
+    
+                </div>
+    
+                <!--Footer-->
+                <div class="modal-footer flex-center">
+                     
+                    
+                    <a href="repMDB.html" class="btn" role="button">Search</a>
 
+                    <input type = "text" id = "address-input" placeholder = "STATE" size = "35" style = "height:25px"><br>
+                    
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: modalPush-->
 
+    
 
 
    

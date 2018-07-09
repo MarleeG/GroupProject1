@@ -1,4 +1,4 @@
-* {
+body     {
     text-align: center;
     background-color: #1c2331;
 
@@ -130,7 +130,7 @@
     display: block;
     height: 2px;
     position: absolute;
-    width: 398px;
+    width: 625px;
     
 }
 
@@ -147,6 +147,17 @@
     margin-top: 25px;
 }
 
+
+/* module */
+
+.modal-dialog.modal-notify.modal-info .modal-header {
+    background-color:#b71c1c
+}
+
    
     
+.btn {background:#b71c1c}
 
+.modal-dialog.modal-notify.modal-info .fa   {color:#b71c1c}
+
+.btn-start {color:red}
