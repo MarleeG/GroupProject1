@@ -88,6 +88,7 @@
             
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPush">Start</button>
+            
          
         
 <!--Modal: modalPush-->
@@ -95,26 +96,30 @@
         <div class="modal-dialog modal-notify modal-info" role="document">
             <!--Content-->
             <div class="modal-content text-center">
+                
+               
+
                 <!--Header-->
                 <div class="modal-header d-flex justify-content-center">
-                    <p class="heading">Enter you home address</p>
+                    <p class="heading">Select a state</p>
                 </div>
     
                 <!--Body-->
                 <div class="modal-body">
     
-                    <i class="fa fa-bell fa-4x animated rotateIn"></i>
+                    <i class="fa fa-search fa-4x animated rotateIn"></i>
     
-                    <p>Do you want to receive the push notification about the newest posts?</p>
+                    <p>Find your representatives and senators in the U.S. Congress</p>
     
                 </div>
     
                 <!--Footer-->
                 <div class="modal-footer flex-center">
                      
-                    <input id = "add-celebrity" type = "submit" value = "search">
                     
-                    <input type = "text" id = "celebrity-input" placeholder = "  #,  Street,  State,  City" size = "40" style = "height:25px"><br>
+                    <a href="repMDB.html" class="btn" role="button">Search</a>
+
+                    <input type = "text" id = "address-input" placeholder = "STATE" size = "35" style = "height:25px"><br>
                     
                 </div>
             </div>
@@ -123,93 +128,7 @@
     </div>
     <!--Modal: modalPush-->
 
-    <div class="container" id="myReps">
-        <div class="row">
-            <!-- Representative -->
-            <div class="col-4-sm" id="rep">
-                <h2>Representative</h2>
-
-                <div id="repName">
-                    <h5>firstName lastName</h5>
-                </div>
-
-                <div id="party">
-                    <h5>Party</h5>
-                </div>
-
-                <div class="clearfix" id="profileImg">
-                    <a href="https://placeholder.com">
-                        <img src="http://via.placeholder.com/200x200" class=" img-thumbnail rounded mx-auto float-left" alt="Representative Placeholder">
-                    </a>
-                </div>
-
-                <div id="bioInfo">
-                    <P>Date Elected</P>
-                    <p>District</p>
-                    <p>Town Name</p>
-                    <p>Contact Number</p>
-                </div>
-
-            </div>
-
-            <!-- Senator1 -->
-            <div class="col-sm-4" id="senOne">
-                <h2>Senator1</h2>
-
-                <div id="repName">
-                    <h5>firstName lastName</h5>
-                </div>
-
-                <div id="party">
-                    <h5>Party</h5>
-                </div>
-
-                <div class="clearfix" id="profileImg">
-                    <a href="https://placeholder.com">
-                        <img src="http://via.placeholder.com/200x200" class=" img-thumbnail rounded mx-auto float-left" alt="Representative Placeholder">
-                    </a>
-                </div>
-
-                <div id="bioInfo">
-                    <P>Date Elected</P>
-                    <p>District</p>
-                    <p>Town Name</p>
-                    <p>Contact Number</p>
-                </div>
-            </div>
-
-            <!-- Senator2 -->
-            <div class="col-sm-4" id="senTwo">
-                <h2>Senator2</h2>
-
-                <div id="repName">
-                    <h5>firstName lastName</h5>
-                </div>
-
-                <div id="party">
-                    <h5>Party</h5>
-                </div>
-
-                <div class="clearfix" id="profileImg">
-                    <a href="https://placeholder.com">
-                        <img src="http://via.placeholder.com/200x200" class=" img-thumbnail rounded mx-auto float-left" alt="Representative Placeholder">
-                    </a>
-                </div>
-
-                <div id="bioInfo">
-                    <P>Date Elected</P>
-                    <p>District</p>
-                    <p>Town Name</p>
-                    <p>Contact Number</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- =========================================================== End Title Page =========================================================== -->
-
-
+    
 
 
    
