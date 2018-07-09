@@ -100,8 +100,47 @@
     </div>
     </div>
 
+<!-- AJAX CAll -->
+<script>
+    /*
+
+AJAX calls the specific member of senate 
+    ex) "Brockman"
+
+*/
+
+var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+var url = "https://api.propublica.org/congress/v1/102-115/senate/members.json";
+
+$.ajax({
+    url: corsAnywhere + url,
+    method: "GET",
+    headers: {
+        "X-API-Key": "vgpLtCWmfon44cEs6OFZ5I8HndnYvIDUROUuC85G"
+    }
+}).then(function (event){
+    console.log(
+        //anything after members[x] shows the certain member 104
+        event.results[0].members
+    );
+
+    console.log(
+        //grabs specific senate "Brockman"
+        event.results[0].members[0].first_name
+    );
+});
 
 
+// .done(function (res) {
+//     console.log( "success" );
+//     console.log( res );
+// }).catch(function (err) {
+//     console.log( "failure" );
+//     console.log( err );
+// });
+
+
+</script>
 
 
 
