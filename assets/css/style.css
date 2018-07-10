@@ -1,14 +1,16 @@
 body     {
     text-align: center;
-    background-color: #1c2331;
+    background-color: #1b2946;
 
 }
 /* Navbar */
 .navbar {
-    background-color: #1c2331;
+    background-color: #454c58;
 }
 
-
+.nav-link {
+    color: #ffffff;
+    }
 
 
 /* Icon 1 */
@@ -106,39 +108,65 @@ body     {
 
 
 
-#banner h1 {
+
+
+h1 {
     display: inline-block;
     line-height: 1.75em;
     letter-spacing: .225em;
     margin:0 0 1em 0;
     font-weight: 800;
-    text-transform: uppercase;
-    color: #fafafa;
-    padding: 0.35em 1em;
-    position: relative;
-    border: 0;
+    color: #ff0000;
+    
     
 
 }
 
-#banner h1:before, #banner h1:after {
-   
-    transition: width 0.85s ease;
-    transition-delay: 0.25s;
-    background: #fff;
+
+h1::before {
+    
+    background: #ffffff;
     content: '';
     display: block;
     height: 2px;
     position: absolute;
     width: 625px;
+   
     
 }
 
+h1::after {
+
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 625px;
+
+}
+
+h5  {-webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-duration: 1s;
+    -moz-animation-delay: 0.6s;
+    -moz-animation-iteration-count: 1;
+    -o-animation-duration: 1s;
+    -o-animation-delay: 0.6s;
+    -o-animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;}
 
 
 
 #launchBtn {
     display: block;
+}
+
+.btn {background:#b71c1c;
+    
 }
 
 
@@ -156,8 +184,27 @@ body     {
 
    
     
-.btn {background:#b71c1c}
+.btn-search {background:#b71c1c;
+    
+    }
 
-.modal-dialog.modal-notify.modal-info .fa   {color:#b71c1c}
 
-.btn-start {color:red}
+
+.btn:hover {background:#7a0a0a;
+}
+
+
+.modal-dialog.modal-notify.modal-info .fa   
+{color:#b71c1c;
+margin-bottom:20px               
+}
+
+
+/* drop down menu */
+
+.design {text-align:center;
+        margin:0px 20px;
+        width:200px;
+        height:40px;
+    }
+
