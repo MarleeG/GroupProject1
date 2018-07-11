@@ -25,27 +25,31 @@ $("#launchBtn").on("click", function (event) {
 ajax call for NYT
 
 */
-var queryURL = "http://api.nytimes.com/svc/topstories/v2/politics.json?api-key=352588500d894acf9e98863456d5095f" 
 
-$.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
-        console.log(response.results[0].url);
-
-        var articleIndex = response.results
-        
-        for(var i = 0; i < articleIndex.length; i++ ){
-            // console.log(articleIndex[i].url);
-            // console.log(articleIndex[i].title);
-            var newsUrl = articleIndex[i].url;
-            var newsTitle = articleIndex[i].title;
-            var link = "<li><a href =' " + newsUrl + " '>" + newsTitle + "</a></li>";
-            // console.log(link);
-            
-
-            $("#topStories").append(link);
-        }
+function searchNews () {
+    var search = "georgia";
+    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    // var search = $("#states option").value(); //$("#states option").value();
+    url += '?' + $.param({
+      'api-key': "352588500d894acf9e98863456d5095f",
+      'q': search + "+politics"
     });
-   
+    $.ajax({
+      url: url,
+      method: "GET"
+    }).then(function (x) {
+        // console.log(x.response.docs[0].web_url);
+        console.log(x.response.docs[0].headline.main);
+        var articleIndex = x.response.docs
+    
+        for(var i = 0; i < articleIndex.length; i++){
+            var newsUrl = articleIndex[i].web_url
+            var newsTitle = articleIndex[i].headline.main
+            var link = "<li><a href =' " + newsUrl + " '>" + newsTitle + "</a></li>";
+            console.log(link);
+            $("#topStories").append(link);    
+        }
+        });
+    }
+    searchNews();
+    
