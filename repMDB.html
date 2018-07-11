@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Page Title</title>
+    <title>Congress</title>
+
 
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
 
     <!-- ===================================== Material Design Boostrap ================================= -->
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
+
+    <script src="assets/javascript/displayRep.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -26,16 +28,13 @@
     <link href="assets/css/repStyle.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="assets/javascript/displaySenate.js"></script>
+
+
 </head>
-
-
-
-
-
-
-
-
-
 
 <body>
     <!-- =========================================================== Start Navbar =========================================================== -->
@@ -95,7 +94,8 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                        <img class="card-img-top" alt="Card image cap" id="repImg" style="height:350px">
+                        <!-- original src: https://mdbootstrap.com/img/Photos/Others/images/16.jpg -->
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -110,16 +110,20 @@
                         <h5 class="card-subtitle" id="repParty">Party</h5>
 
                         <!--Text-->
-                        <p class="card-text" id="dateElect">Date Elected</p>
-                        <p class="card-text" id="RepContactNum">Contact Number</p>
+                        <p class="card-text" id="repNextElect">Next Election</p>
+                        <p class="card-text" id="contactNum">Contact Number</p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-color btn-md">Read more</button>
+                        <a id="repSite">
+                            <button type="button" class="btn btn-color btn-md waves-effect waves-light">Read more</button>
+                        </a>
+
                         <hr>
                         <div class="box">
-                            <img class="twitter" id="RepTwitter" src="assets/images/twitterimg.png">
+                            <a id="repTwitter" target="_blank">
+                                <img class="twitter" src="assets/images/twitterimg.png">
+                            </a>
+
                         </div>
-
-
                     </div>
 
                 </div>
@@ -130,7 +134,8 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+                        <img class="card-img-top" id="senOneImg" alt="Card image cap" style="height:350px">
+                        <!-- orginal src: https://mdbootstrap.com/img/Photos/Others/images/14.jpg -->
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -145,16 +150,19 @@
                         <h5 class="card-subtitle" id="senOneParty">Party</h5>
 
                         <!--Text-->
-                        <p class="card-text" id="dateElect">Date Elected</p>
+                        <p class="card-text" id="senOneNextElect">Next Election</p>
                         <p class="card-text" id="senOneContactNum">Contact Number</p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-color btn-md">Read more</button>
+                        <a id="senOneSite">
+                            <button type="button" class="btn btn-color btn-md waves-effect waves-light">Read more</button>
+                        </a>
+
                         <hr>
                         <div class="box">
-                            <img class="twitter" id="SenTwitter" src="assets/images/twitterimg.png">
+                            <a id="senOneTwitter" target="_blank">
+                                <img class="twitter" id="senTwitterOne" src="assets/images/twitterimg.png">
+                            </a>
                         </div>
-
-
                     </div>
                 </div>
                 <!-- End Senator1 Card -->
@@ -164,7 +172,8 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+                        <img class="card-img-top" id="senTwoImg" alt="Card image cap" style="height:350px">
+                        <!-- original src: https://mdbootstrap.com/img/Photos/Others/images/15.jpg -->
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -179,29 +188,34 @@
                         <h5 class="card-subtitle" id="senTwoParty">Party</h5>
 
                         <!--Text-->
-                        <p class="card-text" id="dateElect">Date Elected</p>
+                        <p class="card-text" id="senTwoNextElect">Next Election</p>
                         <p class="card-text" id="senTwoContactNum">Contact Number</p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                        <button type="button" class="btn btn-color btn-md">Read more</button>
+                        <a id="senTwoSite">
+                            <button type="button" class="btn btn-color btn-md waves-effect waves-light">Read more</button>
+                        </a>
                         <hr>
 
-                        <img class="twitter" id="SenTwitter" src="assets/images/twitterimg.png">
+                        <div class="box">
+                            <div>
+                                <a id="senTwoTwitter" target="_blank">
+                                    <img class="twitter" id="senTwitterTwo" src="assets/images/twitterimg.png">
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
 
-
                 </div>
+                <!-- End Senator2 Card -->
 
             </div>
-            <!-- End Senator2 Card -->
-
-        </div>
         </div>
         <!-- End Card deck -->
 
     </section>
 
     <!-- =========================================================== End My Representatives Section ======================================================-->
-
 
     <!-- =========================================================== Top News Stories Section ======================================================-->
 
@@ -230,6 +244,7 @@
 
 
 
+   
 
     <!-- Optional JavaScript
         downloaded from Material Design Bootstrap -->
@@ -245,6 +260,7 @@
 
     <!-- Our JavaScript -->
     <script src="assets/javascript/logic.js"></script>
+
 </body>
 
 </html>

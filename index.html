@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Page Title</title>
+    <title>Main Page</title>
 
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -28,16 +28,9 @@
     <!-- Our Media Queries -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/queries.css" />
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
-
-
-
-
-
-
-
-
-
 
 <body>
     <!-- =========================================================== Start Navbar =========================================================== -->
@@ -84,8 +77,6 @@
 
 
     <!-- =========================================================== Start Title Page =========================================================== -->
-
-
     <section id="banner">
         <div id="titlePage" style="height: 100vh">
             <div class="flex-center flex-column">
@@ -98,7 +89,6 @@
 
 
                 <button type="button" class="btn btn-start animated fadeIn" data-toggle="modal" data-target="#modalPush">Start</button>
-
 
 
                 <!--Modal: modalPush-->
@@ -128,11 +118,10 @@
                             <!--Footer-->
                             <div class="modal-footer flex-center">
 
-                                <a href="repMDB.html" class="btn" id="search-button" role="button">Search</a>
+                                <button class="btn" role="button" id="search-button">Search</button>
 
                                 <form>
-                                    <select class="design">
-
+                                    <select id="states">
                                         <option value="Alabama">Alabama</option>
                                         <option value="Alaska">Alaska</option>
                                         <option value="Arizona">Arizona</option>
@@ -151,7 +140,7 @@
                                         <option value="Kansas">Kansas</option>
                                         <option value="Kentucky">Kentucky</option>
                                         <option value="Lousiana">Lousiana</option>
-                                        <option value="Main">Main</option>
+                                        <option value="Maine">Maine</option>
                                         <option value="Maryland">Maryland</option>
                                         <option value="Massachusetts">Massachusetts</option>
                                         <option value="Michigan">Michigan</option>
@@ -166,7 +155,7 @@
                                         <option value="New Mexico">New Mexico</option>
                                         <option value="New York">New York</option>
                                         <option value="North Carolina">North Carolina</option>
-                                        <option value="Norh Dakota">Norh Dakota</option>
+                                        <option value="North Dakota">North Dakota</option>
                                         <option value="Ohio">Ohio</option>
                                         <option value="Oklahoma">Oklahoma</option>
                                         <option value="Oregon">Oregon</option>
@@ -185,7 +174,6 @@
                                         <option value="Wyoming">Wyoming</option>
                                     </select>
                                 </form>
-
                             </div>
                         </div>
                         <!--/.Content-->
@@ -195,69 +183,9 @@
 
 
 
-
-
-
-
-
-                <!-- AJAX CAll -->
-                <script>
-                    /*
-                
-                AJAX calls the specific member of senate 
-                    ex) "Brockman"
-                
-                */
-
-                    var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-                    var url = "https://api.propublica.org/congress/v1/102-115/senate/members.json";
-
-                    $.ajax({
-                        url: corsAnywhere + url,
-                        method: "GET",
-                        headers: {
-                            "X-API-Key": "vgpLtCWmfon44cEs6OFZ5I8HndnYvIDUROUuC85G"
-                        }
-                    }).then(function (event) {
-                        console.log(
-                            //anything after members[x] shows the certain member 104
-                            event.results[0].members
-                        );
-
-                        console.log(
-                            //grabs specific senate "Brockman"
-                            event.results[0].members[0].first_name
-                        );
-                    });
-
-
-// .done(function (res) {
-//     console.log( "success" );
-//     console.log( res );
-// }).catch(function (err) {
-//     console.log( "failure" );
-//     console.log( err );
-// });
-
-
-                </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+               
                 <!-- Optional JavaScript
-        downloaded from Material Design Bootstrap -->
+                downloaded from Material Design Bootstrap -->
                 <!-- SCRIPTS -->
                 <!-- JQuery -->
                 <script type="text/javascript" src="assets/javascript/jquery-3.3.1.min.js"></script>
@@ -270,6 +198,16 @@
 
                 <!-- Our JavaScript -->
                 <script src="assets/javascript/logic.js"></script>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous"></script>
+
+                     
+               
+               <script src="assets/javascript/congress.js"></script>
+                
+            </div>
+        </div>
 </body>
 
 </html>
