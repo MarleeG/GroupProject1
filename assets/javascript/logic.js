@@ -21,9 +21,7 @@ $("#launchBtn").on("click", function (event) {
     });
 });
 /* 
-
 ajax call for NYT
-
 */
 
 function searchNews () {
@@ -51,5 +49,4 @@ function searchNews () {
         }
         });
     }
-    searchNews();
-    
+searchNews();
