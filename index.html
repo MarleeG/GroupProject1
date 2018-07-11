@@ -55,15 +55,15 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a href="index.html" class="nav-link">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
+                    <a class="nav-link" href="#">bills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
+                    <a class="nav-link" href="#">Future Updates</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -98,9 +98,10 @@
                         <div class="modal-content text-center">
 
 
+
                             <!--Header-->
                             <div class="modal-header d-flex justify-content-center">
-                                <p class="heading">Select a state</p>
+                                <p class="heading">Find your representatives and senators in the U.S. Congress</p>
                             </div>
 
                             <!--Body-->
@@ -108,7 +109,9 @@
 
                                 <i class="fa fa-search fa-4x animated rotateIn"></i>
 
-                                <p>Find your representatives and senators in the U.S. Congress</p>
+                                <p>
+                                    <strong>Select a state and click search</strong>
+                                </p>
 
                             </div>
 
@@ -180,45 +183,7 @@
 
 
 
-                <!-- AJAX CAll -->
-                <script>
-                    /*
-                
-                AJAX calls the specific member of senate 
-                    ex) "Brockman"
-                
-                */
-                    var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-                    var url = "https://api.propublica.org/congress/v1/102-115/senate/members.json";
-
-                    $.ajax({
-                        url: corsAnywhere + url,
-                        method: "GET",
-                        headers: {
-                            "X-API-Key": "vgpLtCWmfon44cEs6OFZ5I8HndnYvIDUROUuC85G"
-                        }
-                    }).then(function (event) {
-                        console.log(
-                            //anything after members[x] shows the certain member 104
-                            event.results[0].members
-                        );
-
-                        console.log(
-                            //grabs specific senate "Brockman"
-                            // event.results[0].members[0].first_name
-                        );
-                    });
-
-                        // .done(function (res) {
-                        //     console.log( "success" );
-                        //     console.log( res );
-                        // }).catch(function (err) {
-                        //     console.log( "failure" );
-                        //     console.log( err );
-                        // });
-
-
-                </script>
+               
                 <!-- Optional JavaScript
                 downloaded from Material Design Bootstrap -->
                 <!-- SCRIPTS -->
