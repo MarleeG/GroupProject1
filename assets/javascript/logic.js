@@ -43,6 +43,8 @@ $.ajax({
             var newsTitle = articleIndex[i].title;
             var link = "<li><a href =' " + newsUrl + " '>" + newsTitle + "</a></li>";
             // console.log(link);
+            
+
             $("#topStories").append(link);
         }
     });
