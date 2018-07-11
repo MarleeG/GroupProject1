@@ -46,4 +46,10 @@ $.ajax({
             $("#topStories").append(link);
         }
     });
-   
+    
+ 
+
+    $("#states option [value=1]").on("click" , function(){
+        // $(this)
+        console.log(this)
+    });
