@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Page Title</title>
+    <title>Main Page</title>
 
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -28,35 +28,36 @@
     <!-- Our Media Queries -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/queries.css" />
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 
-
-
-
-
-
-
-
-
-
 <body>
-     <!-- =========================================================== Start Navbar =========================================================== -->
-<!--Navbar-->
+    <!-- =========================================================== Start Navbar =========================================================== -->
+    <!--Navbar-->
 
-        <!-- Navbar brand -->
-        <nav class="navbar sticky-top">
-    
+    <!-- Navbar brand -->
+    <nav class="navbar sticky-top">
+
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20"
-            aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon1"><span></span><span></span><span></span></div></button>
-    
+            aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-    
+
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Placeholder</a>
@@ -66,198 +67,184 @@
                 </li>
             </ul>
             <!-- Links -->
-    
+
         </div>
         <!-- Collapsible content -->
-    
+
     </nav>
     <!--/.Navbar-->
-      <!-- =========================================================== End Navbar =========================================================== -->
+    <!-- =========================================================== End Navbar =========================================================== -->
 
 
     <!-- =========================================================== Start Title Page =========================================================== -->
-<section id="banner">
-    <div id="titlePage" style="height: 100vh">
-        <div class="flex-center flex-column">
-            <h1 class="animated fadeInDown mb-4" id="projectTitle">
-                WHO REPRESENTS YOU?
-            </h1>
+    <section id="banner">
+        <div id="titlePage" style="height: 100vh">
+            <div class="flex-center flex-column">
+                <h1 class="animated fadeInDown mb-4" id="projectTitle">
+                    WHO REPRESENTS YOU?
+                </h1>
 
-            <h5 class="animated bounce mb-3" id="projectInfo">A KICKASS WAY TO LEARN ABOUT POLITICS</h5>
+                <h5 class="animated bounce mb-3" id="projectInfo">A KICKASS WAY TO LEARN ABOUT POLITICS</h5>
 
-            
 
-            <button type="button" class="btn btn-start animated fadeIn" data-toggle="modal" data-target="#modalPush">Start</button>
-            
-         
-        
-<!--Modal: modalPush-->
-<div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-info" role="document">
-            <!--Content-->
-            <div class="modal-content text-center">
+
+                <button type="button" class="btn btn-start animated fadeIn" data-toggle="modal" data-target="#modalPush">Start</button>
+
+
+                <!--Modal: modalPush-->
+                <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-notify modal-info" role="document">
+                        <!--Content-->
+                        <div class="modal-content text-center">
+
+
+                            <!--Header-->
+                            <div class="modal-header d-flex justify-content-center">
+                                <p class="heading">Select a state</p>
+                            </div>
+
+                            <!--Body-->
+                            <div class="modal-body">
+
+                                <i class="fa fa-search fa-4x animated rotateIn"></i>
+
+                                <p>Find your representatives and senators in the U.S. Congress</p>
+
+                            </div>
+
+                            <!--Footer-->
+                            <div class="modal-footer flex-center">
+
+                                <button class="btn" role="button" id="search-button">Search</button>
+
+                                <form>
+                                    <select id="states">
+                                        <option value="Alabama">Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                        <option value="Lousiana">Lousiana</option>
+                                        <option value="Maine">Maine</option>
+                                        <option value="Maryland">Maryland</option>
+                                        <option value="Massachusetts">Massachusetts</option>
+                                        <option value="Michigan">Michigan</option>
+                                        <option value="Minesota">Minesota</option>
+                                        <option value="Missippi">Missippi</option>
+                                        <option value="Missouri">Missouri</option>
+                                        <option value="Montana">Montana</option>
+                                        <option value="Nebraska">Nebraska</option>
+                                        <option value="Nevada">Nevada</option>
+                                        <option value="New Jersey">New Jersey</option>
+                                        <option value="New Hempshire">New Hempshire</option>
+                                        <option value="New Mexico">New Mexico</option>
+                                        <option value="New York">New York</option>
+                                        <option value="North Carolina">North Carolina</option>
+                                        <option value="North Dakota">North Dakota</option>
+                                        <option value="Ohio">Ohio</option>
+                                        <option value="Oklahoma">Oklahoma</option>
+                                        <option value="Oregon">Oregon</option>
+                                        <option value="Pennsylvania">Pennsylvania</option>
+                                        <option value="Rhode Island">Rhode Island</option>
+                                        <option value="South Carolina">South Carolina</option>
+                                        <option value="South Dakota">South Dakota</option>
+                                        <option value="Tennessee">Tennessee</option>
+                                        <option value="Texas">Texas</option>
+                                        <option value="Utah">Utah</option>
+                                        <option value="Vermont">Vermont</option>
+                                        <option value="Virginia">Virginia</option>
+                                        <option value="Washington">Washington</option>
+                                        <option value="West Virginia">West Virginia</option>
+                                        <option value="Wisconsin">Wisconsin</option>
+                                        <option value="Wyoming">Wyoming</option>
+                                    </select>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <!--/.Content-->
+                    </div>
+                </div>
+                <!--Modal: modalPush-->
+
+
+
+                <!-- AJAX CAll -->
+                <script>
+                    /*
                 
-               
+                AJAX calls the specific member of senate 
+                    ex) "Brockman"
+                
+                */
+                    var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
+                    var url = "https://api.propublica.org/congress/v1/102-115/senate/members.json";
 
-                <!--Header-->
-                <div class="modal-header d-flex justify-content-center">
-                    <p class="heading">Find your representatives and senators in the U.S. Congress</p>
-                </div>
-    
-                <!--Body-->
-                <div class="modal-body">
-    
-                    <i class="fa fa-search fa-4x animated rotateIn"></i>
-    
-                    <p><strong>Select a state and click search</strong></p>
-    
-                </div>
-    
-                <!--Footer-->
-                <div class="modal-footer flex-center">
+                    $.ajax({
+                        url: corsAnywhere + url,
+                        method: "GET",
+                        headers: {
+                            "X-API-Key": "vgpLtCWmfon44cEs6OFZ5I8HndnYvIDUROUuC85G"
+                        }
+                    }).then(function (event) {
+                        console.log(
+                            //anything after members[x] shows the certain member 104
+                            event.results[0].members
+                        );
+
+                        console.log(
+                            //grabs specific senate "Brockman"
+                            // event.results[0].members[0].first_name
+                        );
+                    });
+
+                        // .done(function (res) {
+                        //     console.log( "success" );
+                        //     console.log( res );
+                        // }).catch(function (err) {
+                        //     console.log( "failure" );
+                        //     console.log( err );
+                        // });
+
+
+                </script>
+                <!-- Optional JavaScript
+                downloaded from Material Design Bootstrap -->
+                <!-- SCRIPTS -->
+                <!-- JQuery -->
+                <script type="text/javascript" src="assets/javascript/jquery-3.3.1.min.js"></script>
+                <!-- Bootstrap tooltips -->
+                <script type="text/javascript" src="assets/javascript/popper.min.js"></script>
+                <!-- Bootstrap core JavaScript -->
+                <script type="text/javascript" src="assets/javascript/bootstrap.min.js"></script>
+                <!-- MDB core JavaScript -->
+                <script type="text/javascript" src="assets/javascript/mdb.min.js"></script>
+
+                <!-- Our JavaScript -->
+                <script src="assets/javascript/logic.js"></script>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous"></script>
+
                      
-                        <a href="repMDB.html" class="btn" id="search-button"role="button">Search</a>
-
-                    <form >
-                        <select class="design">
-                            
-                            <option value="Alabama">Alabama</option>
-                            <option value="Alaska">Alaska</option>
-                            <option value="Arizona">Arizona</option>
-                            <option value="Arkansas">Arkansas</option>
-                            <option value="California">California</option>
-                            <option value="Colorado">Colorado</option>
-                            <option value="Connecticut">Connecticut</option>
-                            <option value="Delaware">Delaware</option>
-                            <option value="Florida">Florida</option>
-                            <option value="Georgia">Georgia</option>
-                            <option value="Hawaii">Hawaii</option>
-                            <option value="Idaho">Idaho</option>
-                            <option value="Illinois">Illinois</option>
-                            <option value="Indiana">Indiana</option>
-                            <option value="Iowa">Iowa</option>
-                            <option value="Kansas">Kansas</option>
-                            <option value="Kentucky">Kentucky</option>
-                            <option value="Lousiana">Lousiana</option>
-                            <option value="Main">Main</option>
-                            <option value="Maryland">Maryland</option>
-                            <option value="Massachusetts">Massachusetts</option>
-                            <option value="Michigan">Michigan</option>
-                            <option value="Minesota">Minesota</option>
-                            <option value="Missippi">Missippi</option>
-                            <option value="Missouri">Missouri</option>
-                            <option value="Montana">Montana</option>
-                            <option value="Nebraska">Nebraska</option>
-                            <option value="Nevada">Nevada</option>
-                            <option value="New Jersey">New Jersey</option>
-                            <option value="New Hempshire">New Hempshire</option>
-                            <option value="New Mexico">New Mexico</option>
-                            <option value="New York">New York</option>
-                            <option value="North Carolina">North Carolina</option>
-                            <option value="Norh Dakota">Norh Dakota</option>
-                            <option value="Ohio">Ohio</option>
-                            <option value="Oklahoma">Oklahoma</option>
-                            <option value="Oregon">Oregon</option>
-                            <option value="Pennsylvania">Pennsylvania</option>
-                            <option value="Rhode Island">Rhode Island</option>
-                            <option value="South Carolina">South Carolina</option>
-                            <option value="South Dakota">South Dakota</option>
-                            <option value="Tennessee">Tennessee</option>
-                            <option value="Texas">Texas</option>
-                            <option value="Utah">Utah</option>
-                            <option value="Vermont">Vermont</option>
-                            <option value="Virginia">Virginia</option>
-                            <option value="Washington">Washington</option>
-                            <option value="West Virginia">West Virginia</option>
-                            <option value="Wisconsin">Wisconsin</option>
-                            <option value="Wyoming">Wyoming</option>
-                        </select>
-                    </form>
-                    
-                </div>
+               
+               <script src="assets/javascript/senate.js"></script>
+                
             </div>
-            <!--/.Content-->
         </div>
-    </div>
-    <!--Modal: modalPush-->
-
-    
-
-
-   
-
-
-
-<!-- AJAX CAll -->
-<script>
-    /*
-
-AJAX calls the specific member of senate 
-    ex) "Brockman"
-
-*/
-
-var corsAnywhere = "https://cors-anywhere.herokuapp.com/";
-var url = "https://api.propublica.org/congress/v1/102-115/senate/members.json";
-
-$.ajax({
-    url: corsAnywhere + url,
-    method: "GET",
-    headers: {
-        "X-API-Key": "vgpLtCWmfon44cEs6OFZ5I8HndnYvIDUROUuC85G"
-    }
-}).then(function (event){
-    console.log(
-        //anything after members[x] shows the certain member 104
-        event.results[0].members
-    );
-
-    console.log(
-        //grabs specific senate "Brockman"
-        event.results[0].members[0].first_name
-    );
-});
-
-
-// .done(function (res) {
-//     console.log( "success" );
-//     console.log( res );
-// }).catch(function (err) {
-//     console.log( "failure" );
-//     console.log( err );
-// });
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript
-        downloaded from Material Design Bootstrap -->
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="assets/javascript/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="assets/javascript/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="assets/javascript/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="assets/javascript/mdb.min.js"></script>
-
-    <!-- Our JavaScript -->
-    <script src="assets/javascript/logic.js"></script>
 </body>
 
 </html>
