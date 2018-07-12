@@ -16,6 +16,8 @@ function displayData() {
 
 
     var input = localStorage.getItem("state");
+    var selectedState = localStorage.getItem("state-name");
+    $("#header").text(selectedState);
 
     // Congress Details
     console.log("Senate data: ", members); //senate
@@ -26,9 +28,9 @@ function displayData() {
 
     for (var i = 0; i < members.length && senCount < 3; i++) {
 
+
         if (input == members[i].state) {
             senCount++;
-
            
             var firstName = members[i].first_name;
             var lastName = members[i].last_name;
@@ -56,14 +58,18 @@ function displayData() {
                 $("#senOneNextElect").text("Next election: " + members[i].next_election);
 
                 // Contact Number
-                $("#senOneContactNum").html(contactNum);
+                if (contactNum === null){
+                    $("#senOneContactNum").text("000-000-0000");
+                }else{
+                    $("#senOneContactNum").html(contactNum);
+                }
 
                 // Website Link
                 $("#senOneSite").attr("href", members[i].url);
                 $("#senOneSite").attr("target", "_blank");
 
                 // Senate Image
-                if (twitterAccount === null || input === "KY") {
+                if (twitterAccount === null || input === "KY" || input === "VA") {
                     $("#senOneImg").attr("src", "assets/images/american-flag.jpg");
                     $("#senOneImg").addClass("american_flag");
                 } else {
@@ -90,7 +96,13 @@ function displayData() {
                 $("#senTwoNextElect").text("Next election: " + members[i].next_election);
 
                 // Contact Number
-                $("#senTwoContactNum").text(contactNum);
+               
+
+                if (contactNum === null){
+                    $("#senTwoContactNum").append("000-000-0000");
+                }else{
+                     $("#senTwoContactNum").text(contactNum);
+                }
 
                 // Website Link
                 $("#senTwoSite").attr("href", members[i].url);
@@ -99,7 +111,7 @@ function displayData() {
                 // Senate Image
                 if (twitterAccount === null || input === "IN" || input === "AL") {
                     $("#senTwoImg").attr("src", "assets/images/american-flag.jpg");
-                    $("#senOneImg").addClass("american_flag");
+                    $("#senTwoImg").addClass("american_flag");
                 } else {
                     $("#senTwoImg").attr("src", senatePic);
                     $("#senTwoImg").addClass("senatePic");
@@ -112,6 +124,7 @@ function displayData() {
     var repCount = 0;
 
     for (var j = 0; j < repMembers.length && repCount < 2; j++) {
+       
         if (input == repMembers[j].state) {
             repCount++;
 
@@ -126,8 +139,12 @@ function displayData() {
             $("#repName").text(repFullName);
 
             // Phone
-            $("#contactNum").text(repContactNum);
-
+            if (repMembers[j].phone === null){
+                $("#contactNum").text("000-000-0000");
+            }else{
+                $("#contactNum").text(repContactNum);
+            }
+            
             // Website Link
             $("#repSite").attr("href", repMembers[j].url);
             $("#repSite").attr("target", "_blank");
@@ -154,7 +171,6 @@ function displayData() {
                 $("#repTwitter").attr("href", ("https://twitter.com/" + repTwitterAccount ));
             }
 
-            console.log("What is j ", j)
         }
     }
 }

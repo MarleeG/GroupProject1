@@ -36,7 +36,7 @@ function officials() {
             Massachusetts: "MA",
             Michigan: "MI",
             Minesota: "MN",
-            Missippi: "MS",
+            Mississippi: "MS",
             Missouri: "MO",
             Montana: "MT",
             Nebraska: "NE",
@@ -91,11 +91,15 @@ function officials() {
                 break;
             case "West Virginia": value = allStates.West_Virginia;
                 break;
+            case "Mississippi": value = allStates.Mississippi;
+            break;
             default: value = allStates[select];
         }
 
         localStorage.setItem("state", value);
 
+        console.log("MS: ", allStates.New_York);
+        debugger;
         // jQuery.ajaxSetup({async:true});
 
         // Senate members
