@@ -36,7 +36,7 @@ function officials() {
             Massachusetts: "MA",
             Michigan: "MI",
             Minesota: "MN",
-            Missippi: "MS",
+            Mississippi: "MS",
             Missouri: "MO",
             Montana: "MT",
             Nebraska: "NE",
@@ -95,6 +95,9 @@ function officials() {
         }
 
         localStorage.setItem("state", value);
+
+        var stateName = $("#states").val();
+        localStorage.setItem("state-name", stateName);
 
         // jQuery.ajaxSetup({async:true});
 
