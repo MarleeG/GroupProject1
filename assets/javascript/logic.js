@@ -37,14 +37,14 @@ function searchNews () {
       method: "GET"
     }).then(function (x) {
         // console.log(x.response.docs[0].web_url);
-        console.log(x.response.docs[0].headline.main);
+        // console.log(x.response.docs[0].headline.main);
         var articleIndex = x.response.docs
     
         for(var i = 0; i < articleIndex.length; i++){
             var newsUrl = articleIndex[i].web_url
             var newsTitle = articleIndex[i].headline.main
             var link = "<li><a href =' " + newsUrl + " '>" + newsTitle + "</a></li>";
-            console.log(link);
+            // console.log(link);
             $("#topStories").append(link);    
         }
         });
