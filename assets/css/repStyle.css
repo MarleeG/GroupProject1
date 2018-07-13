@@ -1,16 +1,16 @@
-* {
+body {
     text-align: center;
    
 
 }
 /* Navbar */
 .navbar {
-    background-color: #1c2331;
+  background-color: #454c58;
 }
 
-.navbar-toggled {
-    background-color: aqua;
-}
+.nav-link {
+  color: #ffffff;
+  }
 
 
 /* Icon 1 */
