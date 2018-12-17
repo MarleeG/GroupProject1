@@ -8,15 +8,14 @@ $(function () {
    
 
 // click event to launch representatives page
-$("#launchBtn").on("click", function (event) {
+$("#search-button").on("click", function (event) {
 
     //prevents page from refreshing on the click of the start button
     event.preventDefault();
     
-    // hides start button after it is clicked
-    $(this).css("display", "none", "background-color", "white");
-    // $("#titlePage").css("display", "none");
-    // $("#myReps").css("display", "block");
+    $("i").css("display", "none");
+      $("#select").html("<img src='assets/images/loading.gif' width='200px'/>");
+      $("i").css("display", "none");
 
     });
 });
@@ -25,7 +24,7 @@ ajax call for NYT
 */
 
 function searchNews () {
-    var search = "georgia";
+    var search = localStorage.getItem("state-name");
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     // var search = $("#states option").value(); //$("#states option").value();
     url += '?' + $.param({
